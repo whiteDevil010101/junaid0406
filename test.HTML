@@ -1,0 +1,915 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.14.0/css/all.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+
+
+
+
+    <title>Interview Task</title>
+</head>
+<style type="text/css">
+   
+   /*Navbar*/
+
+    .bg-dark {
+    background-color: #68a6e5!important;
+}
+.nav-item-blog{
+    margin-left: 48em;
+    inline-size: max-content;
+}
+
+
+
+
+/*<!-- Section 1 - Slider  (Same for Desktop and Mobile)  -->*/
+
+.carousel .carousel-item {
+    width: 100%;
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+}
+
+.carousel .carousel-item:first-of-type {
+    background-image: url("https://ichef.bbci.co.uk/images/ic/960x960/p08634k6.jpg");
+}
+
+.carousel .carousel-item:nth-of-type(2) {
+    background-image: url("http://s9.favim.com/orig/130806/flower-flowers-photography-pink-Favim.com-833641.jpg");
+}
+
+.carousel .carousel-item:last-of-type {
+    background-image: url("https://4.bp.blogspot.com/-pxMLcrD3N7I/UjAMNkqM43I/AAAAAAAAABQ/2-etadUS_48/s640/flowers.jpg");
+}
+
+.carousel-control-prev-icon, .carousel-control-next-icon {
+    width: 50px;
+    height: 50px;
+}
+
+
+
+
+
+body {
+  background: #F8F8F8;
+}
+a {
+  text-decoration: none;
+}
+h1 {
+  text-align: center;
+  font-family: 'Lato', sans-serif;
+  font-size: 25px;
+  line-height: 32px;
+  padding-top: 70px;
+}
+h1 a {
+  color: #66CCCC;
+}
+.price-table-wrapper {
+  font-family: 'Lato', sans-serif;
+  text-align: center;
+  margin-top: 20%;
+}
+.price-table-wrapper .featured-table {
+  box-shadow: 0px 0px 19px -3px rgba(0, 0, 0, 0.36);
+}
+.price-table-wrapper .pricing-table {
+  display: inline-block;
+  border: 1px solid #C8C8C8;
+  border-radius: 10px;
+  background: white;
+  margin: 20px;
+  transition: all 0.3s ease-in-out;
+}
+.price-table-wrapper .pricing-table__header {
+  padding: 20px;
+  font-size: 20px;
+  color: #fff;
+  background: #171717;
+}
+
+#chngec{
+
+background: #28a745;
+
+}
+
+
+
+
+.price-table-wrapper .pricing-table__price {
+  color: #171717;
+  padding: 20px;
+  margin: auto;
+  font-size: 40px;
+  font-weight: 500;
+  background-color: lightgray;
+  margin-top: -3%;
+}
+
+
+.pricing-button{
+
+
+    background-color: lightgray;
+    margin-bottom: 0%;
+}
+.price-table-wrapper .pricing-table__button {
+  display: block;
+  background: #28a745;
+  text-decoration: none;
+  padding: 20px;
+  color: white;
+  position: relative;
+  overflow: hidden;
+  transition: all 0.3s ease-in-out;
+  width: 50%;
+  margin-left: 15%;
+}
+/*.price-table-wrapper .pricing-table__button:before {
+  position: absolute;
+  left: -20%;
+  top: -10%;
+  content: '';
+  width: 60%;
+  height: 220%;
+  transform: rotate(-30deg);
+  background: white;
+  opacity: 0.3;
+  transition: all 0.3s ease-in-out;
+}*/
+.price-table-wrapper .pricing-table__button:after {
+  position: absolute;
+  content: '>';
+  top: 0;
+  right: 0;
+  font-size: 25px;
+  padding: 15px;
+  padding-right: 40px;
+  color: white;
+  opacity: 0;
+  transition: all 0.3s ease-in-out;
+}
+.price-table-wrapper .pricing-table__button:hover {
+  background: black;
+}
+.price-table-wrapper .pricing-table__list {
+  padding: 20px;
+  color: #A0A0A0;
+}
+.price-table-wrapper .pricing-table__list li {
+  padding: 15px;
+  border-bottom: 1px solid #C8C8C8;
+}
+.price-table-wrapper .pricing-table__list li:last-child {
+  border: none;
+}
+/*.price-table-wrapper .pricing-table:hover {
+  box-shadow: 0px 0px 19px -3px rgba(0, 0, 0, 0.36);
+}*/
+.price-table-wrapper .pricing-table:hover .pricing-table__button {
+  padding-left: 0;
+  padding-right: 35px;
+}
+.price-table-wrapper .pricing-table:hover .pricing-table__button:before {
+  top: -80%;
+  transform: rotate(0deg);
+  width: 100%;
+}
+.price-table-wrapper .pricing-table:hover .pricing-table__button:after {
+  opacity: 1;
+  padding-right: 15px;
+}
+
+
+
+
+
+
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+/*    display: flex;*/
+    justify-content: center;
+    align-items: center;
+    font-family: "Poppins", sans-serif;
+}
+
+.container {
+    max-width: 1200px;
+    width: 90%;
+    margin: 0 auto;
+}
+
+:root {
+    /* //....... Color ........// */
+    --primary-color: #ff3c78;
+    --light-black: rgba(0, 0, 0, 0.89);
+    --black: #000;
+    --white: #fff;
+    --grey: #aaa;
+}
+
+.contact {
+    margin-top: 45px;
+}
+
+.form {
+    display: flex;
+    justify-content: space-between;
+    margin: 80px 0;
+}
+
+.form .form-txt {
+    flex-basis: 48%;
+}
+
+.form .form-txt h1 {
+    font-weight: 600;
+    color: var(--black);
+    font-size: 40px;
+    letter-spacing: 1.5px;
+    margin-bottom: 10px;
+    color: var(--light-black);
+}
+
+.form .form-txt span {
+    color: var(--light-black);
+    font-size: 14px;
+}
+
+.form .form-txt h3 {
+    font-size: 22px;
+    font-weight: 600;
+    margin: 15px 0;
+    color: var(--light-black);
+}
+
+.form .form-txt p {
+    color: var(--light-black);
+    font-size: 14px;
+}
+
+.form .form-details {
+    flex-basis: 48%;
+}
+
+.form .form-details input[type="text"],
+.form .form-details input[type="email"] {
+    padding: 15px 20px;
+    color: var(--black);
+    outline: none;
+    border: 1px solid var(--grey);
+    margin: 35px 15px;
+    font-size: 14px;
+}
+
+.form .form-details textarea {
+    padding: 15px 20px;
+    margin: 0 15px;
+    color: var(--black);
+    outline: none;
+    border: 1px solid var(--grey);
+    font-size: 14px;
+    resize: none;
+}
+
+.form .form-details button {
+    padding: 15px 25px;
+    color: var(--white);
+    font-weight: 500;
+    background: var(--black);
+    outline: none;
+    border: none;
+    margin: 15px;
+    font-size: 14px;
+    letter-spacing: 2px;
+    cursor: pointer;
+}
+
+@media (max-width: 500px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+    .form .form-details button {
+        margin-left: 0;
+    }
+    .form .form-details input[type="text"],
+    .form .form-details input[type="email"],
+    .form .form-details textarea {
+        width: 100%;
+        margin-left: 0;
+    }
+    .form .form-details input[type="text"] {
+        margin-bottom: 0px;
+    }
+}
+
+@media(min-width: 501px) and (max-width: 768px) {
+    .form {
+        display: flex;
+        flex-direction: column;
+    }
+    .form .form-details button {
+        margin-left: 0;
+    }
+    .form .form-details input[type="text"],
+    .form .form-details input[type="email"],
+    .form .form-details textarea {
+        width: 100%;
+        margin-left: 0;
+    }
+    .form .form-details input[type="text"] {
+        margin-bottom: 0px;
+    }
+}
+
+
+
+* {
+  box-sizing: border-box;
+}
+
+/* Style inputs */
+input[type=text], select, textarea {
+  width: 50%;
+  padding: 12px;
+  border: 1px solid #ccc;
+  margin-top: 6px;
+  margin-bottom: 16px;
+  resize: vertical;
+}
+
+input[type=submit] {
+  background-color: #04AA6D;
+  color: white;
+  padding: 12px 20px;
+  border: none;
+  cursor: pointer;
+}
+
+input[type=submit]:hover {
+  background-color: #45a049;
+}
+
+/* Style the container/contact section */
+.container {
+  border-radius: 5px;
+/*  background-color: #f2f2f2;*/
+  padding: 10px;
+}
+
+/* Create two columns that float next to eachother */
+.column {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+}
+
+
+
+.column1 {
+  float: left;
+  width: 50%;
+  margin-top: 6px;
+  padding: 20px;
+
+background-color: lightgray;
+    height: 1%;
+
+}
+
+
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive layout - when the screen is less than 600px wide, make the two columns stack on top of each other instead of next to each other */
+@media screen and (max-width: 600px) {
+  .column, input[type=submit] {
+    width: 100%;
+    margin-top: 0;
+  }
+}
+@media only screen and (max-width: 600px) {
+  .container{
+
+    display: none;
+  }
+  .backclo{
+
+    display: none;
+  }
+  .price-table-wrapper{
+    margin-top: 37%;
+  }
+}
+
+
+@media only screen and (min-width: 768px) {
+  /* For desktop: */
+  .col-1 {width: 8.33%;}
+  .col-2 {width: 16.66%;}
+  .col-3 {width: 25%;}
+  .col-4 {width: 33.33%;}
+  .col-5 {width: 41.66%;}
+  .col-6 {width: 50%;}
+  .col-7 {width: 58.33%;}
+  .col-8 {width: 66.66%;}
+  .col-9 {width: 75%;}
+  .col-10 {width: 83.33%;}
+  .col-11 {width: 91.66%;}
+  .col-12 {width: 100%;}
+.container-mo{
+
+    display:none ;
+
+}
+.mobile-con{
+
+    display: none;
+}
+
+}
+
+
+
+
+
+
+
+</style>
+
+
+
+
+
+<body>
+
+<!-- Menu - Desktop and Mobile) -->
+
+<nav class="navbar navbar-dark navbar-expand-sm bg-dark fixed-top">
+        
+
+        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarCollapse" style="margin-right: 83%;">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+
+
+        <div id="navbarCollapse" class="collapse navbar-collapse" style="margin-right: 100%;">
+        <ul class="navbar-nav ml-auto">
+            <li class="nav-item">
+                <a href="" class="nav-link active">
+                    Home
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link active">
+                    Products
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link active">
+                    Services
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link active">
+                    Team
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link active">
+                    Portfolio
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link active">
+                    Blog
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="" class="nav-link active">
+                    Contact
+                </a>
+            </li>
+             <li class="nav-item-blog">
+                <a href="" class="nav-link active">
+                    Go my Blog
+                </a>
+            </li>
+        </ul>
+        </div>
+</nav>
+
+
+<!-- Section 1 - Slider  (Same for Desktop and Mobile)  -->
+
+
+<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+    <ol class="carousel-indicators">
+        <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+        <li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+    </ol>
+    <div class="carousel-inner" role="listbox">
+        <div class="carousel-item active"></div>
+        <div id="target" class="carousel-item"></div>
+        <div class="carousel-item"></div>
+    </div>
+    <a class="carousel-control-prev" href="#carouselExampleIndicators" role="button" data-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="sr-only">Previous</span>
+    </a>
+    <a class="carousel-control-next" href="#carouselExampleIndicators" role="button" data-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="sr-only">Next</span>
+    </a>
+</div>
+
+
+
+
+<!-- Section 2 - Why Us Desktop* -->
+
+
+<div class=backclo style="    background-color: #5caff18f; height: 190px;">
+<div class="container" style="padding-top: 5%;
+    margin-top: 3%;;">
+  <div class="row row-cols-4" style="
+    border-radius: 12px 12px 0px 0px; background-color: aliceblue; padding-top: 15px; border-block-end: 1px solid;">
+    <div class="col"><h2>11+ Year</h2><br><p>Experience in Teaching kids</p></div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+  </div>
+    <div class="row row-cols-4" style="
+    border-radius: 0px 0px 12px 12px; background-color: aliceblue; padding-top: 15px;">
+    <div class="col"><img src="https://upload.wikimedia.org/wikipedia/commons/8/8f/Yahoo%21_Finance_logo_2021.png" width="100" height="100"></div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+  </div>
+</div>
+</div></div>
+
+
+
+
+<!-- Section 2 - Why Us Mobile -->
+<div class="mobile-con" style="    background-color: #5caff18f;
+    height: 190px;">
+<div class="container-mo" style="padding-top: 7%; text-align: center; margin-top: 3%;" >
+  <div class="row row-cols-2" style="border-radius: 12px 12px 0px 0px;
+    background-color: aliceblue;
+    padding-top: 15px;
+    border-block-end: 1px solid; width: 90%; 
+    margin-left: 25px;">
+    <div class="col"><h2>11+ Year</h2><br><p>Experience in Teaching kids</p></div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+  </div>
+<div class="row row-cols-2" style="border-radius: 0px 0px 12px 12px;
+    background-color: aliceblue;
+    padding-top: 15px; width: 90%; margin-left: 25px;">
+    <div class="col"><h2>11+ Year</h2><br><p>Experience in Teaching kids</p></div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+    <div class="col">Column</div>
+  </div>
+
+</div>
+</div>
+
+
+
+
+
+
+
+<!-- Pricing table - Desktop  -->
+
+<link href='https://fonts.googleapis.com/css?family=Lato:400,300,700,100' rel='stylesheet' type='text/css'>
+
+
+
+<div class="price-table-wrapper">
+  <div class="pricing-table">
+    <h2 class="pricing-table__header">Basic</h2>
+    <h3 class="pricing-table__price">$ 9.99 / year</h3>
+    <ul class="pricing-table__list">
+      <li>10GB Storage </li>
+      <li>10 Emails</li>
+      <li>10 Domains</li>
+      <li>1GB Bandwidth</li>
+    </ul>
+    <ul class="pricing-button">    
+    <a target="_blank" class="pricing-table__button" href="#">
+      Sign Up
+    </a>    
+    </ul>
+  </div>
+  <div class="pricing-table featured-table">
+    <h2 class="pricing-table__header" id="chngec">Pro</h2>
+    <h3 class="pricing-table__price">$ 24.99 / year </h3>
+    <ul class="pricing-table__list">
+      <li>25GB Storage </li>
+      <li>25 Emails</li>
+      <li>25 Domains</li>
+      <li>2GB Bandwidth</li>
+    </ul>
+    <ul class="pricing-button">    
+    <a target="_blank" class="pricing-table__button" href="#">
+      Sign Up
+    </a>    
+    </ul>
+  </div>
+  <div class="pricing-table">
+    <h2 class="pricing-table__header">PREMIUM</h2>
+    <h3 class="pricing-table__price">$ 49.99 / year</h3>
+    <ul class="pricing-table__list">
+      <li>50GB Storage </li>
+      <li>50 Emails</li>
+      <li>50 Domains</li>
+      <li>5GB Bandwidth</li>
+    </ul>
+    <ul class="pricing-button">    
+    <a target="_blank" class="pricing-table__button" href="#">
+      Sign Up
+    </a>    
+    </ul>
+    
+  </div>
+</div>
+
+
+
+
+        <div class="contact container">
+            <form>
+                <div class="form">
+                    <div class="form-txt">
+                        <h1>Contact Us <br>Sales team</h1>
+                        <p>Lets Explore how </p>
+                        
+                    </div>
+   
+
+
+                </div>
+            </form>
+        </div>
+
+
+
+
+<div class="container">
+  
+  <div class="row">
+    <div class="column1">
+                        
+                        <p style="background-color: lightgray;
+    text-align: center; border-bottom: solid 1px; padding-bottom: 20px;">Reading practice to help you understand simple information, words and sentences about known topics. Texts include posters, messages, forms and timetables.</p>
+
+                        <p style="background-color: lightgray;
+    text-align: center; border-bottom: solid 1px; padding-bottom: 20px;">Reading practice to help you understand simple texts and find specific information in everyday material. Texts include emails, invitations, personal messages, tips, notices and signs.</p>
+
+                        <p style="background-color: lightgray;
+    text-align: center; ">Reading practice to help you understand texts with everyday or job-related language. Texts include articles, travel guides, emails, adverts and reviews.</p>
+
+                        
+    </div>
+    <div class="column">
+
+       <label for="fname" style="display: block;">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname" style="display: block;">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name..">
+
+       <label for="fname" style="display: block;">First Name</label>
+        <input type="text" id="fname" name="firstname" placeholder="Your name..">
+        <label for="lname" style="display: block;">Last Name</label>
+        <input type="text" id="lname" name="lastname" placeholder="Your last name.." style="display: block;">
+        <label for="subject">Subject</label>
+        <textarea id="subject" name="subject" placeholder="Write something.." style="height:170px"></textarea>
+        <input type="submit" value="Submit"  style="display: block;">
+    </div>
+  </div>
+</div>
+
+
+
+<!-- Footer -->
+<footer class="page-footer font-small blue pt-4" style="background: #343232c7;">
+
+  <!-- Footer Links -->
+  <div class="container-fluid text-center text-md-left">
+
+    <!-- Grid row -->
+    <div class="row">
+
+      <!-- Grid column -->
+      <div class="col-md-6 mt-md-0 mt-3" style="color: white;">
+
+        <!-- Content -->
+        <h5 class="text-uppercase">Footer Content</h5>
+        <p>Here you can use rows and columns to organize your footer content.</p>
+
+      </div>
+      <!-- Grid column -->
+
+      <hr class="clearfix w-100 d-md-none pb-3">
+
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3" style="color: white; max-width: 11%;">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" style="color: white;">Link 1</a>
+          </li>
+          <li>
+            <a href="#!" style="color: white;">Link 2</a>
+          </li>
+          <li>
+            <a href="#!" style="color: white;">Link 3</a>
+          </li>
+          <li>
+            <a href="#!" style="color: white;">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+     
+      <!-- Grid column -->
+      <div class="col-md-3 mb-md-0 mb-3" style="color: white; max-width: 11%;">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled" >
+          <li>
+            <a href="" style="color: white;">Link 1</a>
+          </li>
+          <li>
+            <a href="#!" style="color: white;">Link 2</a>
+          </li>
+          <li>
+            <a href="#!"style="color: white;">Link 3</a>
+          </li>
+          <li>
+            <a href="#!" style="color: white;">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+      <!-- Grid column -->
+<div class="col-md-3 mb-md-0 mb-3" style="color: white; max-width: 11%;">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" style="color: white;">Link 1</a>
+          </li>
+          <li>
+            <a href="#!" style="color: white;">Link 2</a>
+          </li>
+          <li>
+            <a href="#!" style="color: white;">Link 3</a>
+          </li>
+          <li>
+            <a href="#!" style="color: white;">Link 4</a>
+          </li>
+        </ul>
+
+      </div> <!-- Grid column -->
+
+
+<div class="col-md-3 mb-md-0 mb-3" style="color: white; max-width: 11%;">
+
+        <!-- Links -->
+        <h5 class="text-uppercase">Links</h5>
+
+        <ul class="list-unstyled">
+          <li>
+            <a href="#!" style="color: white;">Link 1</a>
+          </li>
+          <li>
+            <a href="#!" style="color: white;">Link 2</a>
+          </li>
+          <li>
+            <a href="#!" style="color: white;">Link 3</a>
+          </li>
+          <li>
+            <a href="#!" style="color: white;">Link 4</a>
+          </li>
+        </ul>
+
+      </div>
+    
+
+
+
+    </div>
+
+  </div>
+
+
+ <div class="footer-rgfre" style="border-block-start: solid 2px #c7c7c7; padding-bottom: 10px;
+    padding-top: 10px;
+">
+     <a style="margin-left: 45%; color: white;"> Register for free 
+<button type="button" class="btn btn-secondary btn-lg" style="margin-left:15px;" disabled>Sign Up</button>
+         </a>
+     </div>
+
+
+<div class="socialme" style="border-block-start: solid 1px #c7c7c7; padding-bottom: 20px;
+    padding-top: 20px; " >
+<!-- Facebook -->
+<i class="fab fa-facebook-f " style="margin-left: 46% ;
+    font-size: 25px; color: white;"></i>
+
+<!-- Twitter -->
+<i class="fab fa-twitter" style=" ;
+    font-size: 25px;"></i>
+
+<!-- Google -->
+<i class="fab fa-google" style=" color: white;
+    font-size: 25px;"></i>
+
+<!-- Instagram -->
+<i class="fab fa-instagram" style="color: white;
+    font-size: 25px;"></i>
+
+<!-- Linkedin -->
+<i class="fab fa-linkedin-in" style="color: white;
+    font-size: 30px;"></i>
+
+<!-- Github -->
+<i class="fab fa-github" style="color: white;
+    font-size: 25px;"></i>
+
+<!-- Dribbble -->
+<i class="fab fa-dribbble" style="color: white;
+    font-size: 25px;"></i>
+
+</div>
+  <!-- Footer Links -->
+
+  <!-- Copyright -->
+  <div class="footer-copyright text-center py-3" style="background-color: #242121e0; color: white;">© 2020 Copyright:
+    <a href="/" style="color: white;"> MDBootstrap.com</a>
+  </div>
+  <!-- Copyright -->
+
+</footer>
+<!-- Footer -->
+
+
+
+
+</body>
+
+
+
+
+</html>
+
+
+
+
+
+
+
+
+  
+  
+
+   
